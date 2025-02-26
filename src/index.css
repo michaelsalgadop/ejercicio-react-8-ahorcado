@@ -12,11 +12,8 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--color-primario);
 }
-body.dark {
-  background-color: var(--color-primario-dark);
-}
+
 ul {
   padding: 0;
   margin: 0;
@@ -32,6 +29,13 @@ svg > * {
   stroke-linecap: round;
   stroke-miterlimit: 10;
   transition: 0.25s;
+}
+.contenedor-app {
+  height: 100vh;
+  background-color: var(--color-primario);
+}
+.contenedor-app.dark {
+  background-color: var(--color-primario-dark);
 }
 .stage {
   visibility: hidden;
@@ -67,11 +71,11 @@ svg > * {
 .casilla.show .letra {
   opacity: 1;
 }
-body.dark .casillas .casilla {
+.contenedor-app.dark .casillas .casilla {
   border-bottom: 2px solid var(--color-lineas-dark);
 }
-body.dark .casillas .casilla .letra,
-body.dark .letras-usadas .letra-usada {
+.contenedor-app.dark .casillas .casilla .letra,
+.contenedor-app.dark .letras-usadas .letra-usada {
   color: var(--color-lineas-dark);
 }
 .input-letra {
@@ -101,9 +105,9 @@ body.dark .letras-usadas .letra-usada {
   font-size: 35px;
   color: var(--color-lineas);
 }
-body.dark .boton-modo {
+.contenedor-app.dark .boton-modo {
   border: 2px solid var(--color-lineas-dark);
 }
-body.dark .boton-modo > .icono {
+.contenedor-app.dark .boton-modo > .icono {
   color: var(--color-lineas-dark);
 }
