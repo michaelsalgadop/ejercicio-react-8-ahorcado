@@ -24,6 +24,6 @@ Devuelve:
 ```
 {
     error: true,
-    mensaje: "No se encontró la letra"
+    message: "No se encontró la letra"
 }
 ```

@@ -19,6 +19,12 @@ ul {
   margin: 0;
   list-style: none;
 }
+.hide {
+  visibility: hidden;
+}
+.color-secundario {
+  color: var(--color-secundario);
+}
 svg.hangman {
   width: 18.75rem;
   height: 18.75rem;
@@ -31,7 +37,7 @@ svg > * {
   transition: 0.25s;
 }
 .contenedor-app {
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--color-primario);
 }
 .contenedor-app.dark {
@@ -49,7 +55,8 @@ svg > * {
 }
 .letra-usada,
 .casilla,
-.final-juego {
+.final-juego,
+.mensaje-error {
   font-size: 30px;
 }
 .letra-usada {
@@ -80,7 +87,8 @@ svg > * {
   width: 60px;
   font-size: 18px;
 }
-.final-juego {
+.final-juego,
+.mensaje-error {
   font-weight: bold;
 }
 .final-juego.victoria {

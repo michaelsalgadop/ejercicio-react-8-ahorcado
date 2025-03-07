@@ -16,6 +16,7 @@ export const Main = (props) => {
     falladas: 0,
     usadas: [],
   });
+  const [mensajeError, setMensajeError] = useState("");
   const maxNumeroFallos = 11;
   const contieneLetra = async (letra) => {
     if (!palabraAleatoria) return;
@@ -24,6 +25,14 @@ export const Main = (props) => {
     const resultado = await obtenerDatos(
       `https://palabras-api-uwlg.onrender.com/letras/${palabraAleatoria}/${letra}`
     );
+    setMensajeError((prevMensajeError) =>
+      resultado.error
+        ? resultado.message
+        : prevMensajeError === ""
+        ? prevMensajeError
+        : ""
+    );
+
     setLetras((prevLetras) => ({
       ...prevLetras,
       acertadas: !resultado.error
@@ -88,7 +97,11 @@ export const Main = (props) => {
           finalPartida={finalPartida.victoria || finalPartida.derrota}
         ></Input>
       </div>
-      <Info letrasUsadas={letras.usadas} finalPartida={finalPartida}></Info>
+      <Info
+        letrasUsadas={letras.usadas}
+        finalPartida={finalPartida}
+        mensajeError={mensajeError}
+      ></Info>
       <Modo></Modo>
     </main>
   );
