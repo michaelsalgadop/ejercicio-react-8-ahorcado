@@ -24,6 +24,6 @@ Devuelve:
 ```
 {
     error: true,
-    mensaje: "La palabra no incluye esta letra"
+    mensaje: "No se encontró la letra"
 }
 ```
