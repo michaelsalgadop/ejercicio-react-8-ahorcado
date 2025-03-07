@@ -59,10 +59,7 @@ svg > * {
   border-bottom: 2px solid var(--color-lineas);
   min-width: 20px;
 }
-.casilla-dummy,
-.letra-usada-dummy {
-  display: none;
-}
+
 .casilla .letra {
   opacity: 0;
   transition: opacity 500ms;

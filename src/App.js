@@ -1,4 +1,4 @@
-import { ThemeProvider, useTheme } from "./context/ThemeContext";
+import { ThemeProvider } from "./context/ThemeContext";
 import { Main } from "./componentes/Main";
 
 function App() {
