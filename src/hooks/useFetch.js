@@ -10,13 +10,18 @@ export const useFetch = () => {
       return new Promise((resolve, reject) =>
         fetch(url)
           .then((response) => response.json())
-          .then((datos) => resolve(datos))
-          .catch((error) => reject(error))
+          .then((datos) => {
+            setLoading(false);
+            return resolve(datos);
+          })
+          .catch((error) => {
+            setLoading(false);
+            return reject(error);
+          })
       );
     } catch (error) {
-      console.error(error.message);
-    } finally {
       setLoading(false);
+      console.error(error.message);
     }
   };
   return { loading, obtenerDatos };
