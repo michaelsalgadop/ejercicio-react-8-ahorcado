@@ -1,7 +1,7 @@
 import { useRef } from "react";
 
 export const Input = (props) => {
-  const { contieneLetra, finalPartida } = props;
+  const { contieneLetra, loading, finalPartida } = props;
   const timer = useRef(null);
   const valorCorrecto = (valorIntroducido) =>
     /^[a-zA-Z]$/.test(valorIntroducido);
@@ -20,7 +20,7 @@ export const Input = (props) => {
         id="letra"
         className="input-letra text-center"
         placeholder="Letra..."
-        disabled={finalPartida}
+        disabled={finalPartida || loading}
         onInput={recogerLetra}
       />
     </div>

@@ -94,6 +94,7 @@ export const Main = (props) => {
         )}
         <Input
           contieneLetra={contieneLetra}
+          loading={loading}
           finalPartida={finalPartida.victoria || finalPartida.derrota}
         ></Input>
       </div>

@@ -2,7 +2,7 @@ export const Palabra = (props) => {
   const { palabraAleatoria, letrasAcertadas } = props;
   return (
     <div className="col-12 d-flex justify-content-center align-items-center form-group">
-      <ul className="casillas d-flex">
+      <ul className="casillas d-flex flex-wrap justify-content-center">
         {palabraAleatoria &&
           palabraAleatoria.split("").map((letra, indice) => {
             const posicionLetra = letrasAcertadas.find(

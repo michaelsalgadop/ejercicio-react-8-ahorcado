@@ -75,6 +75,12 @@ svg > * {
 .casilla.show .letra {
   opacity: 1;
 }
+.loader {
+  color: var(--color-lineas);
+}
+.loader span {
+  border-color: var(--color-lineas) var(--color-lineas) transparent !important;
+}
 .contenedor-app.dark .casillas .casilla {
   border-bottom: 2px solid var(--color-lineas-dark);
 }
@@ -111,8 +117,12 @@ svg > * {
   color: var(--color-lineas);
 }
 .contenedor-app.dark .boton-modo {
-  border: 2px solid var(--color-lineas-dark);
+  border: 2px solid var(--color-lineas-dark) !important;
 }
-.contenedor-app.dark .boton-modo > .icono {
+.contenedor-app.dark .loader span {
+  border-color: var(--color-lineas-dark) var(--color-lineas-dark) transparent !important;
+}
+.contenedor-app.dark .boton-modo > .icono,
+.contenedor-app.dark .loader {
   color: var(--color-lineas-dark);
 }
