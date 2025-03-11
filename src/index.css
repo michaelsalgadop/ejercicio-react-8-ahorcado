@@ -56,7 +56,8 @@ svg > * {
 .letra-usada,
 .casilla,
 .final-juego,
-.mensaje-error {
+.mensaje-error,
+.loader {
   font-size: 30px;
 }
 .letra-usada {
@@ -77,6 +78,8 @@ svg > * {
 }
 .loader {
   color: var(--color-lineas);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid transparent;
 }
 .loader span {
   border-color: var(--color-lineas) var(--color-lineas) transparent !important;

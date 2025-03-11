@@ -1,3 +1,4 @@
+import { palabraSchema } from "../schemas/datosSchemas";
 export const Palabra = (props) => {
   const { palabraAleatoria, letrasAcertadas } = props;
   return (
@@ -21,3 +22,4 @@ export const Palabra = (props) => {
     </div>
   );
 };
+Palabra.propTypes = palabraSchema;

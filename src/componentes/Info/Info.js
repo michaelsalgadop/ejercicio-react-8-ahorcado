@@ -1,6 +1,6 @@
 import { LetrasUsadas } from "./LetrasUsadas";
 import { Mensaje } from "./Mensaje";
-
+import { InfoSchema } from "../../schemas/datosSchemas";
 export const Info = (props) => {
   const { letrasUsadas, finalPartida, mensajeError } = props;
 
@@ -20,3 +20,4 @@ export const Info = (props) => {
     </>
   );
 };
+Info.propTypes = InfoSchema;

@@ -1,5 +1,5 @@
 import { useRef } from "react";
-
+import { inputSchema } from "../schemas/datosSchemas";
 export const Input = (props) => {
   const { contieneLetra, loading, finalPartida } = props;
   const timer = useRef(null);
@@ -26,3 +26,4 @@ export const Input = (props) => {
     </div>
   );
 };
+Input.propTypes = inputSchema;

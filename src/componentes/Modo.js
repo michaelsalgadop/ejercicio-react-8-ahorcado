@@ -1,7 +1,7 @@
 import { useCallback } from "react";
 import { useTheme } from "../context/ThemeContext";
 
-export const Modo = (props) => {
+export const Modo = () => {
   const [theme, setTheme] = useTheme();
   const toggleTheme = useCallback(
     () => setTheme((prev) => (prev === "dark" ? "" : "dark")),

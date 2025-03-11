@@ -7,7 +7,7 @@ import { useTheme } from "../context/ThemeContext";
 import { useFetch } from "../hooks/useFetch";
 import { Loading } from "./Loading";
 import { useEffect, useState } from "react";
-export const Main = (props) => {
+export const Main = () => {
   const [theme, setTheme] = useTheme(); // Accedemos al contexto
   const { loading, obtenerDatos } = useFetch();
   const [palabraAleatoria, setPalabraAleatoria] = useState(null);

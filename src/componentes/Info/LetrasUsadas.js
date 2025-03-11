@@ -1,3 +1,5 @@
+import { letrasUsadasSchema } from "../../schemas/datosSchemas";
+
 export const LetrasUsadas = (props) => {
   const { letrasUsadas } = props;
   return (
@@ -10,3 +12,4 @@ export const LetrasUsadas = (props) => {
     </ul>
   );
 };
+LetrasUsadas.propTypes = letrasUsadasSchema;

@@ -1,3 +1,4 @@
+import { munyecoSchema } from "../schemas/datosSchemas";
 export const Munyeco = (props) => {
   const { numeroFallos } = props;
   const partes = [
@@ -98,3 +99,4 @@ export const Munyeco = (props) => {
     </div>
   );
 };
+Munyeco.propTypes = munyecoSchema;

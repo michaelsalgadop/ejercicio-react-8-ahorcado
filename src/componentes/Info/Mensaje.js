@@ -1,3 +1,5 @@
+import { mensajeSchema } from "../../schemas/datosSchemas";
+
 export const Mensaje = (props) => {
   const { finalPartida, mensajeError } = props;
   return (
@@ -27,3 +29,4 @@ export const Mensaje = (props) => {
     </div>
   );
 };
+Mensaje.propTypes = mensajeSchema;
